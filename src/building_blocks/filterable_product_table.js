@@ -4,7 +4,7 @@ import { ProductTable } from "./product_table";
 
 export const FilterableProductTable = props => {
   const [filterText, setFilterText] = React.useState("");
-  const [inStockOnly, setInStoclOnly] = React.useState(false);
+  const [inStockOnly, setInStockOnly] = React.useState(false);
 
   return (
     <div>
@@ -12,7 +12,7 @@ export const FilterableProductTable = props => {
         filterText={filterText}
         inStockOnly={inStockOnly}
         onFilterTextChange={e => setFilterText(e)}
-        onInStockChange={e => setInStoclOnly(e)}
+        onInStockChange={e => setInStockOnly(e)}
       />
       <ProductTable
         products={props.products}

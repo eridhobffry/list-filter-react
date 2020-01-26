@@ -1,4 +1,4 @@
-export const PRODUCTS = [
+export const products_files = [
   {
     category: "Sporting Goods",
     price: "$49.99",

@@ -3,11 +3,11 @@ import PropsTypes from "prop-types";
 
 export const ProductRow = props => {
   const price = props.price;
-  const product = props;
+  const product = props.product;
   const name = product.stocked ? (
-    product.name
+    props.name
   ) : (
-    <span style={{ color: "red" }}>{product.name}</span>
+    <span style={{ color: "red" }}>{props.name}</span>
   );
 
   return (
@@ -19,7 +19,7 @@ export const ProductRow = props => {
 };
 
 ProductRow.propsTypes = {
-  product: PropsTypes.object.isRequired,
+  // product: PropsTypes.object.isRequired,
   name: PropsTypes.string.isRequired,
   price: PropsTypes.string.isRequired
 };

@@ -2,11 +2,11 @@ import React from "react";
 import PropsTypes from "prop-types";
 
 export const SearchBar = props => {
-  handleFilterTextChange = e => {
+  const handleFilterTextChange = e => {
     props.onFilterTextChange(e.target.value);
   };
 
-  handleInStockChange = e => {
+  const handleInStockChange = e => {
     props.onInStockChange(e.target.checked);
   };
 
@@ -19,7 +19,7 @@ export const SearchBar = props => {
         type="text"
         placeholder="Search..."
         value={filterText}
-        onChange={props.handleFilterTextChange}
+        onChange={handleFilterTextChange}
       />
       <p>
         <input

@@ -6,12 +6,12 @@ import PropsTypes from "prop-types";
 export const ProductTable = props => {
   const filterText = props.filterText;
   const inStockOnly = props.inStockOnly;
-  const products = props;
+  // const products = props;
 
   const rows = [];
   let lastCategory = null;
 
-  products.forEach(product => {
+  const rowsPush = props.products.map(product => {
     if (product.name.indexOf(filterText) === -1) {
       return;
     }
@@ -27,7 +27,9 @@ export const ProductTable = props => {
         />
       );
     }
-    rows.push(<ProductRow product={product} key={product.name} />);
+    rows.push(
+      <ProductRow name={product.name} product={product} price={product.price} />
+    );
 
     lastCategory = product.category;
   });
